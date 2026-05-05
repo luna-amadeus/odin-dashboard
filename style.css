@@ -1,14 +1,15 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 #container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 1fr 4fr;
-    max-height: 100%;
-    max-width: 100%;
+    grid-template-rows: 1fr 6fr;
+    height: 100vh;
+    width: 100vw;
 }
 
 
@@ -20,10 +21,35 @@ header {
     background-color: red;
     grid-column: 2 / span 2;
     grid-row-start: 1;
+    padding: 20px;
+    
 
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 2fr 3fr;
     grid-template-columns: 5fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    max-height: 100%;
+    max-width: 100%;
+}
+
+header label {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+header label img {
+    margin-right: 20px;
+}
+
+header label input {
+    width: 80%;
+    height: 2em;
+    border-radius: 8px;
 }
 
 header a:first-of-type {
@@ -41,6 +67,15 @@ header a:nth-of-type(2) {
 
 #welcome img {
     grid-row: 1 / span 2;
+    align-self: center;
+    justify-self: center;
+}
+
+header button {
+    height: 4em;
+    width: 10em;
+    padding: 5px;
+    border-radius: 50px;
 }
 
 
@@ -53,9 +88,26 @@ header a:nth-of-type(2) {
     background-color: orange;
     grid-row: 1 / -1;
     grid-column-start: 1;
+
     display: flex;
-    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
     flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.sidebar button {
+    border: 0;
+    height: 4em;
+}
+
+#dashlogo {
+    margin-bottom: 0;
+    height: min-content;
+}
+
+#controls {
+    margin-top: 50px;
 }
 
 .dashdiv {
@@ -64,6 +116,7 @@ header a:nth-of-type(2) {
 
 .dashdiv button {
     width: 100%;
+    text-align: left;
 }
 
 #admin {
@@ -79,11 +132,16 @@ header a:nth-of-type(2) {
 
 
 
+
+
 main {
     background-color: yellow;
     grid-column-start: 2;
     grid-row-start: 2;
     padding: 20px;
+
+    max-height: 100%;
+    max-width: 100%;
 }
 
 main h3 {
@@ -93,13 +151,32 @@ main h3 {
 #projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    
+    gap: 20px;    
 }
 
 .project {
-    min-height: 200px;
+    min-height: 180px;
     background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.project h4 {
+    width: 100%;
+}
+
+.project p {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.icons {
+    margin-top: auto;
+    margin-left: auto;
+    align-self: flex-end;
 }
 
 
@@ -117,22 +194,36 @@ main h3 {
     display: grid;
     grid-template-rows: 50% 50%;
     padding: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .updates h3 {
-    padding: 5px;
+    padding-bottom: 5px;
 }
 
 #announcelist {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 30px;
+    padding: 10px;
+    background-color: white;
+}
+
+#trending {
+    margin-top: 35px;
+    width: 100%;
 }
 
 #trendaccs {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     gap: 20px;
+    background-color: white;
 }
 
 .trendingacc {
