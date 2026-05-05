@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+
+
+
+
+header {
+    background-color: red;
+    grid-column: 2 / span 2;
+    grid-row-start: 1;
+
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 5fr 1fr 1fr 1fr;
+}
+
+header a:first-of-type {
+    text-align: right;
+}
+
+header a:nth-of-type(2) {
+    text-align: center;
+}
+
+#welcome {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+#welcome img {
+    grid-row: 1 / span 2;
+}
+
+
+
+
+
+
+
+.sidebar {
+    background-color: orange;
+    grid-row: 1 / -1;
+    grid-column-start: 1;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.dashdiv {
+    width: 100%;
+}
+
+.dashdiv button {
+    width: 100%;
+}
+
+#admin {
+    margin-top: auto;
+}
+
+
+
+
+
+
+
+
+
+
+main {
+    background-color: yellow;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    padding: 20px;
+}
+
+main h3 {
+    padding: 10px;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    
+}
+
+.project {
+    min-height: 200px;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+.updates {
+    background-color: green;
+    grid-column-start: 3;
+    grid-row: 2 / -1;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    padding: 20px;
+}
+
+.updates h3 {
+    padding: 5px;
+}
+
+#announcelist {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+#trendaccs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.trendingacc {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.trendingacc img {
+    grid-row: 1 / span 2;
+}
